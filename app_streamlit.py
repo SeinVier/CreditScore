@@ -6,7 +6,7 @@ from pathlib import Path
 st.set_page_config(page_title="Credit Score Assessor", page_icon="💳", layout="wide")
 @st.cache_resource
 def load_model():
-    model_path = Path("models/best_model.pkl")
+    model_path = Path("best_model.pkl")
     if not model_path.exists():
         st.error(f"File model tidak ditemukan di {model_path}. Silakan jalankan pipeline.py terlebih dahulu.")
         st.stop()
